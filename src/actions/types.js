@@ -1,0 +1,34 @@
+// Action Types for Session
+export const OPEN_LASTSESSION = 'OPEN_LASTSESSION';
+export const OPEN_NEWSESSION = 'OPEN_NEWSESSION';
+export const START_SESSION = 'START_SESSION';
+export const FINISH_SESSION = 'FINISH_SESSION';
+
+// Action Types for Main Exercise
+export const OPEN_ADDNEWEXERCISE = 'OPEN_ADDNEWEXERCISE';
+export const OPEN_LISTEXERCISE = 'OPEN_LISTEXERCISE';
+export const OPEN_ADDWORKOUTSET = 'OPEN_ADDWORKOUTSET';
+export const OPEN_LISTWORKOUT = 'OPEN_LISTWORKOUT';
+
+// Action Types for Exercise
+export const SAVE_NEW_EXERCISE = 'SAVE_NEW_EXERCISE';
+export const ADD_ANOTHER_COUNTER = 'ADD_ANOTHER_COUNTER';
+export const SAVE_EXERCISE = 'SAVE_EXERCISE';
+export const OPEN_EXERCISE = 'OPEN_EXERCISE';
+export const DELETE_EXERCISE = 'DELETE_EXERCISE';
+
+// Action Types for Workout
+export const SAVE_NEW_WORKOUT = 'SAVE_NEW_WORKOUT';
+export const SAVE_WORKOUT = 'SAVE_WORKOUT';
+export const OPEN_WORKOUT = 'OPEN_WORKOUT';
+export const DELETE_WORKOUT = 'DELETE_WORKOUT';
+
+// Action Types for Progress
+export const OPEN_HISTORY = 'OPEN_HISTORY';
+
+// Action Types for Settings
+export const OPEN_SETTINGS_LANGUAGE = 'OPEN_SETTINGS_LANGUAGE';
+export const OPEN_SETTINGS_HISTORY = 'OPEN_SETTINGS_HISTORY';
+export const OPEN_SETTINGS_ABOUT = 'OPEN_SETTINGS_ABOUT';
+export const CHANGE_LANGUAGE = 'CHANGE_LANGUAGE';
+export const DELETE_SESSION_HISTORY = 'DELETE_SESSION_HISTORY';

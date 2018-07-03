@@ -1,0 +1,104 @@
+{
+    "stack": {
+        "session_tab": "Sesi",
+        "exercise_tab": "Latihan",
+        "progress_tab": "Progres",
+        "settings_tab": "Pengaturan"
+    },
+    "session": {
+        "main": {
+            "start_button": "Mulai",
+            "start_button_def": "Mulai Sesi Latihan :",
+            "last_session_button": "Lihat Sesi Terakhir",
+            "last_session_def": "Sesi Terakhir Anda"
+        },
+        "new": {
+            "text_1": "Pilih sesi workout untuk memulai latihan Anda :",
+            "label_workouts": "Sesi Workout",
+            "start_button": "Mulai",
+            "alert_no_workout": "Tidak ada workout yang dipilih"
+        },
+        "the": {
+            "finish_button": "Akhiri Sesi"
+        }
+    },
+    "exercise": {
+        "main": {
+            "add_new_ex_button": "Tambah Latihan",
+            "edit_ex_button": "Edit Latihan",
+            "add_new_wo_button": "Tambah Set Workout",
+            "edit_wo_button": "Edit Set Workout"
+        },
+        "add_ex": {
+            "add_counter_button": "Tambah pengukur",
+            "save_button": "Simpan",
+            "alert_null_save": "Mohon isi sebelum menyimpan",
+            "alert_add_counter": "Silahkan beri nama latihan terlebih dahulu",
+            "label_name_alert": "Silahkan masukkan nama latihan. contoh: Bench Press",
+            "tcomb_optional": " (opsional)",
+            "tcomb_ex_name": "Nama Latihan",
+            "tcomb_additional_counter": "Pengukur tambahan",
+            "tcomb_help_optional": "opsional",
+            "alert_success": "Sukses",
+            "alert_success_info": "Latihan berhasil disimpan.",
+            "alert_save_fail": "Mohon maaf terjadi error. Silahkan me-restart applikasi."
+        },
+        "list_ex": {
+            "alert_warning": "Peringatan",
+            "alert_delete_info": "Apakah anda ingin menghapus latihan ini: {{name}}",
+            "alert_delete_cancel": "Batalkan",
+            "alert_delete_delete": "Hapus",
+            "alert_success": "Sukses",
+            "alert_save_success": "Data berhasil disimpan."
+        },
+        "add_wo": {
+            "tcomb_wo_name": "Nama Workout",
+            "tcomb_exercises": "Latihan",
+            "tcomb_exercise": "Latihan",
+            "add_button": "Tambah",
+            "save_button": "Simpan",
+            "alert_null_save": "Mohon isi sebelum menyimpan",
+            "label_name_alert": "Silahkan masukkan nama set workout yang diingini. contoh: Workout Badan Atas",
+            "alert_success": "Sukses",
+            "alert_success_info": "Workout berhasil disimpan.",
+            "alert_save_fail": "Mohon maaf terjadi error. Silahkan me-restart applikasi."
+        },
+        "list_wo": {
+            "alert_warning": "Peringatan",
+            "alert_delete_info": "Apakah anda ingin menghapus latihan ini: {{name}}",
+            "alert_delete_cancel": "Batalkan",
+            "alert_delete_delete": "Hapus",
+            "alert_success": "Sukses",
+            "alert_save_success": "Data berhasil disimpan."
+        }
+    },
+    "progress": {
+        "main": {
+            "history_button": "Histori"
+        },
+        "history": {
+            "empty_date": "- tidak ada sesi latihan -",
+            "session_end": "Waktu akhir sesi"
+        }
+    },
+    "settings": {
+        "language": {
+            "language": "Bahasa",
+            "select_info": "Bahasa",
+            "change_button": "Ubah",
+            "alert_select": "Pilih bahasa",
+            "alert_restart": "Perubahan dapat dilihat setelah aplikasi di-restart."
+        },
+        "history": {
+            "history": "Histori",
+            "button": "Hapus semua Histori",
+            "alert_warning": "Peringatan",
+            "alert_delete_info": "Apakah anda ingin menghapus semua Histori?",
+            "alert_delete_cancel": "Batalkan",
+            "alert_delete_delete": "Hapus"
+        },
+        "about": {
+            "about": "Tentang Aplikasi"
+        }
+    }
+}

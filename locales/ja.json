@@ -1,0 +1,104 @@
+{
+    "stack": {
+        "session_tab": "セッション",
+        "exercise_tab": "運動類",
+        "progress_tab": "履歴",
+        "settings_tab": "設定"
+    },
+    "session": {
+        "main": {
+            "start_button": "スタート",
+            "start_button_def": "新運動セッションを始める :",
+            "last_session_button": "前回のセッションを確認",
+            "last_session_def": "前回のセッション"
+        },
+        "new": {
+            "text_1": "ワークアウトを選んでください:",
+            "label_workouts": "ワークアウト",
+            "start_button": "スタート",
+            "alert_no_workout": "まずワークアウトを選んでください"
+        },
+        "the": {
+            "finish_button": "セッション終了"
+        }
+    },
+    "exercise": {
+        "main": {
+            "add_new_ex_button": "新運動類を追加",
+            "edit_ex_button": "運動類編集",
+            "add_new_wo_button": "ワークアウトセットを追加",
+            "edit_wo_button": "ワークアウトセット編集"
+        },
+        "add_ex": {
+            "add_counter_button": "追加",
+            "save_button": "保存",
+            "alert_null_save": "まず記入してください",
+            "alert_add_counter": "まずネーム記入してください",
+            "label_name_alert": "まずネーム記入してください。例：Bench Press",
+            "tcomb_optional": " (要否)",
+            "tcomb_ex_name": "名",
+            "tcomb_additional_counter": "もっとカウンター",
+            "tcomb_help_optional": "要否",
+            "alert_success": "完了",
+            "alert_success_info": "新運動は完全に保存されました",
+            "alert_save_fail": "エラー！なにかが起こったかもしれない。アプリを再起動してください"
+        },
+        "list_ex": {
+            "alert_warning": "注意",
+            "alert_delete_info": "この運動を削除しますか： {{name}}",
+            "alert_delete_cancel": "取り消す",
+            "alert_delete_delete": "削除",
+            "alert_success": "完了",
+            "alert_save_success": "データ保存されました"
+        },
+        "add_wo": {
+            "tcomb_wo_name": "ワークアウト名",
+            "tcomb_exercises": "運動",
+            "tcomb_exercise": "運動類",
+            "add_button": "追加",
+            "save_button": "保存",
+            "alert_null_save": "まず記入してください",
+            "label_name_alert": "まずネーム記入してください。例： Workout A",
+            "alert_success": "完了",
+            "alert_success_info": "新ワークアウトは完全に保存されました",
+            "alert_save_fail": "エラー！なにかが起こったかもしれない。アプリを再起動してください"
+        },
+        "list_wo": {
+            "alert_warning": "注意",
+            "alert_delete_info": "このワークアウトを削除しますか： {{name}}",
+            "alert_delete_cancel": "取り消す",
+            "alert_delete_delete": "削除",
+            "alert_success": "完了",
+            "alert_save_success": "データ保存されました"
+        }
+    },
+    "progress": {
+        "main": {
+            "history_button": "履歴"
+        },
+        "history": {
+            "empty_date": "- ワークアウトなし -",
+            "session_end": "セッション終了時　"
+        }
+    },
+    "settings": {
+        "language": {
+            "language": "言語",
+            "select_info": "言語",
+            "change_button": "変更",
+            "alert_select": "言語を選択してください",
+            "alert_restart": "変更を適用するにはアプリを再起動する必要があります"
+        },
+        "history": {
+            "history": "履歴",
+            "button": "履歴削除",
+            "alert_warning": "注意",
+            "alert_delete_info": "この履歴全てを削除しますか",
+            "alert_delete_cancel": "取り消す",
+            "alert_delete_delete": "削除"
+        },
+        "about": {
+            "about": "アプリについて"
+        }
+    }
+}

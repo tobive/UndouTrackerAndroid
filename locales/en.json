@@ -1,0 +1,104 @@
+{
+    "stack": {
+        "session_tab": "Session",
+        "exercise_tab": "Exercise",
+        "progress_tab": "Progress",
+        "settings_tab": "Settings"
+    },
+    "session": {
+        "main": {
+            "start_button": "Start",
+            "start_button_def": "Start New Workout Session :",
+            "last_session_button": "See Last Workout Session",
+            "last_session_def": "Your Last Session"
+        },
+        "new": {
+            "text_1": "Select workout set to start a session:",
+            "label_workouts": "Workouts",
+            "start_button": "Start",
+            "alert_no_workout": "No Workout selected"
+        },
+        "the": {
+            "finish_button": "Finish Session"
+        }
+    },
+    "exercise": {
+        "main": {
+            "add_new_ex_button": "Add New Exercise",
+            "edit_ex_button": "Edit Exercise",
+            "add_new_wo_button": "Add New Workout Set",
+            "edit_wo_button": "Edit Workout Set"
+        },
+        "add_ex": {
+            "add_counter_button": "Add another counter",
+            "save_button": "Save",
+            "alert_null_save": "Please fill in before saving",
+            "alert_add_counter": "Please give name to exercise first",
+            "label_name_alert": "Please input the exercise you want to add. e.g. Bench Press",
+            "tcomb_optional": " (optional)",
+            "tcomb_ex_name": "Exercise Name",
+            "tcomb_additional_counter": "Additional Counter",
+            "tcomb_help_optional": "optional",
+            "alert_success": "Success",
+            "alert_success_info": "New exercise has been successfully saved.",
+            "alert_save_fail": "Save error! Something's wrong. Please restart application."
+        },
+        "list_ex": {
+            "alert_warning": "Warning",
+            "alert_delete_info": "Do you want to delete this exercise: {{name}}",
+            "alert_delete_cancel": "Cancel",
+            "alert_delete_delete": "Delete",
+            "alert_success": "Success",
+            "alert_save_success": "Data has been successfully saved."
+        },
+        "add_wo": {
+            "tcomb_wo_name": "Workout Name",
+            "tcomb_exercises": "Exercises",
+            "tcomb_exercise": "Exercise",
+            "add_button": "Add",
+            "save_button": "Save",
+            "alert_null_save": "Please fill in before saving",
+            "label_name_alert": "Please name the workout plan. e.g. Workout A",
+            "alert_success": "Success",
+            "alert_success_info": "New workout has been successfully saved.",
+            "alert_save_fail": "Save error! Something's wrong. Please restart application."
+        },
+        "list_wo": {
+            "alert_warning": "Warning",
+            "alert_delete_info": "Do you want to delete this workout: {{name}}",
+            "alert_delete_cancel": "Cancel",
+            "alert_delete_delete": "Delete",
+            "alert_success": "Success",
+            "alert_save_success": "Data has been successfully saved."
+        }
+    },
+    "progress": {
+        "main": {
+            "history_button": "History"
+        },
+        "history": {
+            "empty_date": "- no workout today -",
+            "session_end": "Session ended"
+        }
+    },
+    "settings": {
+        "language": {
+            "language": "Language",
+            "select_info": "Language",
+            "change_button": "Change",
+            "alert_select": "Select a language",
+            "alert_restart": "Changes will take effect after you restart the application."
+        },
+        "history": {
+            "history": "History",
+            "button": "Delete Session History",
+            "alert_warning": "Warning",
+            "alert_delete_info": "Do you want to delete all history?",
+            "alert_delete_cancel": "Cancel",
+            "alert_delete_delete": "Delete"
+        },
+        "about": {
+            "about": "About"
+        }
+    }
+}
