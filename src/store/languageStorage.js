@@ -19,6 +19,10 @@ const loadStorageLanguage = (currentState) => {
                 });
             }).catch(err => {
                 alert('FAIL LOAD LANGUAGE');
+                resolve({
+                    ...currentState,
+                    language: resultState
+                });
             });
         } catch (err) {
             alert(err);
