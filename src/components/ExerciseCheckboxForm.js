@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
-import CheckBox from 'react-native-check-box'; 
+import CheckBox from 'react-native-checkbox-heaven'; 
 
 class ExerciseCheckboxForm extends Component {
     constructor(props) {
@@ -13,7 +13,7 @@ class ExerciseCheckboxForm extends Component {
         this.state = { ...obj };
     }
 
-    onClick = () => {
+    onClick = (val) => {
         this.props.checkForm(this.state, this.props.idBox);
     };
 
@@ -31,7 +31,14 @@ class ExerciseCheckboxForm extends Component {
                         <Text style={styles.nameText}>{this.props.exerciseName}</Text>
                     </View>
                     <View style={styles.checkbox}>
-                        <CheckBox onClick={() => this.onClick()} />
+                        <CheckBox 
+                            onChange={this.onClick.bind(this)}
+                            iconName='faCircleFill'
+                            uncheckedColor='white'
+                            checkedColor='tomato'
+                            checked={this.props.checked}
+                            iconSize={38}
+                        />
                     </View>
                 </View>                
                 <View style={styles.exerciseDetail}>
@@ -53,6 +60,7 @@ class ExerciseCheckboxForm extends Component {
                                             : styles.counterInput}
                                         onChangeText={val => this.getCounterValue(ctr, val)}
                                         editable={!this.props.checked}
+                                        value={this.state[ctr] + ''}
                                     />
                                 </View>
                             </View>
@@ -79,7 +87,7 @@ const styles = StyleSheet.create({
     },
     exerciseHeader: {
         maxWidth: 280,
-        backgroundColor: '#D1D100',
+        backgroundColor: '#D1D15F',
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
@@ -91,7 +99,7 @@ const styles = StyleSheet.create({
     },
     checkbox: {
         flex: 1,
-        marginLeft: 10,
+        marginLeft: 30,
         marginRight: 10,
         justifyContent: 'center',
     },
@@ -123,15 +131,15 @@ const styles = StyleSheet.create({
     },
     counterInput: {
         width: 60,
-        height: 30,
-        fontSize: 18,
+        height: 50,
+        fontSize: 20,
         color: 'black',
     },
     counterInputGreyed: {
         width: 60,
-        height: 30,
-        fontSize: 18,
-        color: 'white',
+        height: 50,
+        fontSize: 20,
+        color: '#62676a',
     },
     textBox: {
         backgroundColor: 'white',
@@ -145,9 +153,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     textBoxGreyed: {
-        backgroundColor: 'grey',
+        backgroundColor: '#ebebe4',
         borderRadius: 4,
         borderWidth: 0.5,
+        borderColor: '#a9a9a9',
         width: 60,
         height: 40,
         marginLeft: 20,
