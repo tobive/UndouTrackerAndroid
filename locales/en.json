@@ -19,7 +19,9 @@
             "alert_no_workout": "No Workout selected"
         },
         "the": {
-            "finish_button": "Finish Session"
+            "finish_button": "Finish Session",
+            "finish_title": "Congratulations",
+            "finish_message": "You finished your session."
         }
     },
     "exercise": {

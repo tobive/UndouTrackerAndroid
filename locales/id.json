@@ -19,7 +19,9 @@
             "alert_no_workout": "Tidak ada workout yang dipilih"
         },
         "the": {
-            "finish_button": "Akhiri Sesi"
+            "finish_button": "Akhiri Sesi",
+            "finish_title": "Selesai",
+            "finish_message": "Sesi telah diakhiri."
         }
     },
     "exercise": {

@@ -19,7 +19,9 @@
             "alert_no_workout": "まずワークアウトを選んでください"
         },
         "the": {
-            "finish_button": "セッション終了"
+            "finish_button": "セッション終了",
+            "finish_title": "終了",
+            "finish_message": "セッションが終わりました"
         }
     },
     "exercise": {
