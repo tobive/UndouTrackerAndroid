@@ -10,6 +10,7 @@ const loadStorageExercise = (currentState) => {
                 storage.getIdsForKey('exercise').then(resId => {
                     resultState.listExercises = resData;
                     resultState.ids = resId;
+                    // alert(JSON.stringify(resultState));
                     resolve({
                         ...currentState,
                         listExercise: resultState

@@ -10,6 +10,7 @@ import loadStorageExercise from './exerciseStorage';
 import loadStorageWorkout from './workoutStorage';
 import loadStorageSession from './sessionStorage';
 import loadStorageLanguage from './languageStorage';
+import loadExampleData from './exampleData';
 
 global.storage = new Storage({
     size: 1000,
@@ -18,11 +19,12 @@ global.storage = new Storage({
     enableCache: true,
   });
 
-const loadAllStorage = (currentState) => {
+const loadAllStorage = async (currentState) => {
+    const saveExample = await loadExampleData();
     return new Promise(resolve => {
         loadStorageLanguage(currentState)
-        .then(resultEx => {
-            loadStorageWorkout(resultEx)
+        .then(resultLa => {
+            loadStorageWorkout(resultLa)
             .then(resultWo => {
                 loadStorageSession(resultWo)
                 .then(resultSess => {
@@ -34,7 +36,7 @@ const loadAllStorage = (currentState) => {
             })
             .catch(err => {
                 resolve(currentState);
-            });            
+            });
         })
         .catch(err => {
             resolve(currentState);
@@ -56,8 +58,8 @@ export default function configureStore(initialState) {
                 navMiddleware, 
                 promiseMiddleware,
                 asyncInitialState.middleware(loadAllStorage),
-            ),
-            window.devToolsExtension ? window.devToolsExtension() : f => f
+            )
+            // ,window.devToolsExtension ? window.devToolsExtension() : f => f
         )
     );
 
