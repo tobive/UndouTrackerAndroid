@@ -60,16 +60,15 @@ class ListWorkoutContainer extends Component {
                       name={ex.workoutName} 
                     />
                   </View>
-                  <View style={styles.deleteContainer}>
-                    <TouchableHighlight
-                      key={`but-${id}`}
-                      onPress={() => this.deleteWorkout(listIds[id], ex.workoutName)}
-                    >
-                      <View>
+                  <TouchableHighlight
+                    key={`but-${id}`}
+                    onPress={() => this.deleteWorkout(listIds[id], ex.workoutName)}
+                    underlayColor='#5b717a'
+                  >
+                    <View style={styles.deleteContainer}>
                         <Ionicons name={'ios-trash'} size={25} color={'white'} />
-                      </View>
-                    </TouchableHighlight>
-                  </View>
+                    </View>
+                  </TouchableHighlight>
                 </View>
               );
             })

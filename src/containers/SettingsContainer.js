@@ -32,7 +32,10 @@ class SettingsContainer extends Component {
     return (
       <ScrollView style={styles.container}>
         <View style={styles.panel}>
-          <TouchableHighlight onPress={this.onPressLanguage}>
+          <TouchableHighlight 
+            onPress={this.onPressLanguage}
+            underlayColor='#5b717a'
+          >
             <View style={styles.touch}>
               <View><Text style={styles.text}>{strings('settings.language.language')}</Text></View>
               <View style={styles.arrow}><Ionicons name={'ios-arrow-forward'} size={25} color='#d1d1d1' /></View>
@@ -40,7 +43,10 @@ class SettingsContainer extends Component {
           </TouchableHighlight>
         </View>
         <View style={styles.panel}>
-          <TouchableHighlight onPress={this.onPressHistory}>
+          <TouchableHighlight 
+            onPress={this.onPressHistory}
+            underlayColor='#5b717a'
+          >
             <View style={styles.touch}>
               <View><Text style={styles.text}>{strings('settings.history.history')}</Text></View>
               <View style={styles.arrow}><Ionicons name={'ios-arrow-forward'} size={25} color='#d1d1d1' /></View>
@@ -48,7 +54,10 @@ class SettingsContainer extends Component {
           </TouchableHighlight>
         </View>
         <View style={styles.panel}>
-          <TouchableHighlight onPress={this.onPressAbout}>
+          <TouchableHighlight 
+            onPress={this.onPressAbout}
+            underlayColor='#5b717a'
+          >
             <View style={styles.touch}>
               <View><Text style={styles.text}>{strings('settings.about.about')}</Text></View>
               <View style={styles.arrow}><Ionicons name={'ios-arrow-forward'} size={25} color='#d1d1d1' /></View>
@@ -82,7 +91,6 @@ const styles = StyleSheet.create({
   arrow: {
     marginRight: 10,
   },
-
 });
 
 function mapDispatchToProps(dispatch) {

@@ -86,6 +86,7 @@ const styles = StyleSheet.create({
         
     },
     exerciseHeader: {
+        flex: 1,
         maxWidth: 280,
         backgroundColor: '#D1D15F',
         flexDirection: 'row',
@@ -95,13 +96,12 @@ const styles = StyleSheet.create({
         flex: 2,
         marginTop: 20,
         marginBottom: 15,
-        marginLeft: 20,        
+        marginLeft: 20,      
     },
     checkbox: {
         flex: 1,
-        marginLeft: 30,
-        marginRight: 10,
         justifyContent: 'center',
+        alignItems: 'center',
     },
     exerciseDetail: {
         flex: 1,

@@ -83,7 +83,10 @@ class SaveExerciseForm extends Component {
     };
 
     return (
-      <ScrollView style={styles.container}>
+      <ScrollView 
+        style={styles.container}
+        keyboardShouldPersistTaps='handled'
+      >
         <Form
           ref={c => this._form = c}
           type={Exercise}

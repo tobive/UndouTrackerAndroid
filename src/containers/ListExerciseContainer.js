@@ -59,17 +59,16 @@ class ListExerciseContainer extends Component {
                       open={() => this.openExercise(listIds[id])} 
                       name={ex.exerciseName} 
                     />
-                  </View>                  
-                  <View style={styles.deleteContainer}>
-                    <TouchableHighlight
-                      key={`but-${id}`}
-                      onPress={() => this.deleteExercise(listIds[id], ex.exerciseName)}
-                    >
-                      <View>
-                        <Ionicons name={'ios-trash'} size={25} color={'white'} />
-                      </View>
-                    </TouchableHighlight>
-                  </View>
+                  </View>       
+                  <TouchableHighlight
+                    key={`but-${id}`}
+                    onPress={() => this.deleteExercise(listIds[id], ex.exerciseName)}
+                    underlayColor='#5b717a'
+                  >           
+                    <View style={styles.deleteContainer}>
+                      <Ionicons name={'ios-trash'} size={25} color={'white'} />
+                    </View>
+                  </TouchableHighlight>
                 </View>
               );
             })

@@ -61,7 +61,10 @@ class TheSessionForm extends Component {
         const listProps = this.changeListExsToProps();
 
         return (
-            <ScrollView style={styles.container}>
+            <ScrollView 
+                style={styles.container}
+                keyboardShouldPersistTaps='handled'
+            >
                 <View style={styles.checkboxContainer}>              
                     {listProps.map((item, idx) => {
                         return (

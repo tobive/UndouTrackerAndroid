@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
-import { Agenda, LocaleConfig } from 'react-native-calendars';
+import { Agenda } from 'react-native-calendars';
 import { strings } from '../../locales/i18n';
 
 class HistoryCalendar extends PureComponent {
@@ -10,7 +10,7 @@ class HistoryCalendar extends PureComponent {
     this.state = { items };
   }
 
-  getItems() {
+  getItems = () => {
     const items = {};
     if (this.props.listSessions === undefined) return {};
     this.props.listSessions.forEach((sess, idx) => {
@@ -22,7 +22,7 @@ class HistoryCalendar extends PureComponent {
     return items;
   }
 
-  getMarkedDates() {
+  getMarkedDates = () => {
     const md = {};
     const distinctDates = [];
     if (this.props.listDates === undefined) return {};
@@ -37,26 +37,26 @@ class HistoryCalendar extends PureComponent {
     return md;
   }
 
-  rowHasChanged(r1, r2) {
+  rowHasChanged = (r1, r2) => {
     return r1.workoutName !== r2.workoutName;
   }
 
-  loadItems(day) {
-    setTimeout(() => {
-      for (let i = -15; i < 15; i++) {
-        const time = day.timestamp + i * 24 * 60 * 60 * 1000;
-        const strTime = this.timeToString(time);
-        if (!this.state.items[strTime]) {
-          this.state.items[strTime] = [];         
-        }
+  loadItems = day => {
+    const newItems = {};
+    const arrDates = Object.keys(this.state.items);
+    arrDates.forEach(key => {newItems[key] = this.state.items[key];});
+    for (let i = -15; i < 15; i++) {
+      const time = day.timestamp + i * 24 * 60 * 60 * 1000;
+      const strTime = this.timeToString(time);
+      if (!this.state.items[strTime]) {
+        newItems[strTime] = [];         
       }
-      //console.log(this.state.items);
-      const newItems = {};
-      Object.keys(this.state.items).forEach(key => {newItems[key] = this.state.items[key];});
-      this.setState({
-        items: newItems
-      });
-    }, 200);
+    }
+    this.setState({
+      items: newItems
+    }
+    // ,alert(JSON.stringify(this.state.items))
+    );
   }
 
   timeToString(time) {
@@ -64,7 +64,7 @@ class HistoryCalendar extends PureComponent {
     return date.toISOString().split('T')[0];
   }
 
-  renderItem(item) {
+  renderItem = (item) => {
     return (
       <View style={styles.item}>
         <Text style={styles.workoutName}>{item.workoutName}</Text>
@@ -80,12 +80,12 @@ class HistoryCalendar extends PureComponent {
             </View>
           );
         })}
-        <Text>{'\n'}{strings('progress.history.session_end')}: {item.fullDate.split(' ')[1]}</Text>
+        <Text>{'\n'}{strings('progress.history.session_end')}: {item.fullDate.split(' ')[3]}</Text>
       </View>
     );
   }
 
-  renderEmptyDate() {
+  renderEmptyDate = () => {
     return (
       <View style={styles.emptyDate}>
         <Text>{strings('progress.history.empty_date')}</Text>
@@ -94,18 +94,19 @@ class HistoryCalendar extends PureComponent {
   }
 
   render() {
+    const markedDates = this.getMarkedDates();
     return (
         <View style={styles.container}>
             <Agenda
 	      // isDefaultViewCalendar property is not from default module 
-              isDefaultViewCalendar={1}
+              isDefaultViewCalendar={0}
               items={this.state.items}
-              loadItemsForMonth={this.loadItems.bind(this)}
-              renderItem={this.renderItem.bind(this)}
-              renderEmptyDate={this.renderEmptyDate.bind(this)}
-              rowHasChanged={this.rowHasChanged.bind(this)}
-              markedDates={this.getMarkedDates()}
-              markingType={'period'}
+              loadItemsForMonth={this.loadItems}
+              renderItem={this.renderItem}
+              renderEmptyDate={this.renderEmptyDate}
+              rowHasChanged={this.rowHasChanged}
+              markedDates={markedDates}
+              markingType='period'
               theme={{ 
                 calendarBackground: '#37474F', 
                 agendaDayTextColor: 'grey',
@@ -114,6 +115,8 @@ class HistoryCalendar extends PureComponent {
                 dayTextColor: '#E8E869',
                 monthTextColor: '#E8E869',
               }}
+              onDayChange={this.loadItems}
+              onDayPress={this.loadItems}
               // renderDay={(day, item) => (<Text>{day ? day.day: 'item'}</Text>)}
             />
         </View>

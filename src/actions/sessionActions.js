@@ -1,6 +1,7 @@
 import { Alert } from 'react-native';
 import { OPEN_LASTSESSION, OPEN_NEWSESSION, 
     START_SESSION, FINISH_SESSION } from './types';
+import { strings } from '../../locales/i18n';
 
 export function openLastSession() {
   return {
@@ -56,7 +57,7 @@ export function finishSession(value) {
         data,
         expires: null
       });
-      Alert.alert('Congratulations', 'You finished your session.');
+      Alert.alert(strings('session.the.finish_title'), strings('session.the.finish_message'));
       return {
           type: FINISH_SESSION,
           routeName: 'Session',

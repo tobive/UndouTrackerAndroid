@@ -52,9 +52,9 @@ class SaveWorkoutForm extends Component {
         i18n: {
           required: '',
           add: strings('exercise.add_wo.add_button'),   // add button
-          remove: '✘',  // remove button
-          up: '↑',      // move up button
-          down: '↓'     // move down button
+          remove: '✖',  // remove button
+          up: '▲',      // move up button
+          down: '▼'     // move down button
         },
         fields: {
           workoutName: {
@@ -80,7 +80,10 @@ class SaveWorkoutForm extends Component {
       });
 
       return (
-        <ScrollView style={styles.container}>
+        <ScrollView 
+          style={styles.container}
+          keyboardShouldPersistTaps='handled'
+        >
           <Form
             ref={c => this._form = c}
             type={Workout}
@@ -90,7 +93,7 @@ class SaveWorkoutForm extends Component {
           <View style={styles.saveButton}>
             <GeneralButton
               title={strings('exercise.add_wo.save_button')}
-              onPress={() => this.saveForm()}
+              onPress={this.saveForm}
               textSize={18}
             />
           </View>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { StackNavigator } from 'react-navigation';
+// import { TabNavigator } from 'react-navigation';
 import SettingsContainer from '../containers/SettingsContainer';
 import LanguageSettingsContainer from '../containers/LanguageSettingsContainer';
 import HistorySettingsContainer from '../containers/HistorySettingsContainer';

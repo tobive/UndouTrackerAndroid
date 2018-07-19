@@ -91,21 +91,26 @@ class MainExerciseScreen extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     flexDirection: 'column',
     backgroundColor: '#37474F',
   },
   panelContainer1: {
-    height: (height - 50) / 2,
+    height: (height - 140) / 2,
     justifyContent: 'center',
     alignItems: 'center',
+    // borderWidth: 1,
+    // borderColor: 'red',
   },
   imageContainer1: {
-    height: (height - 50) / 2,
+    height: (height - 140) / 2,
     width: width,
-    paddingTop: 40,
+    paddingTop: 10,
     paddingBottom: 10,
-    paddingLeft: 10,
-    paddingRight: 10,            
+    // paddingLeft: 10,
+    // paddingRight: 10,
+    // borderWidth: 2,
+    // borderColor: 'blue',          
   },
   image: {
     flex: 1, 
@@ -128,17 +133,21 @@ const styles = StyleSheet.create({
     marginBottom: 20, 
   },
   panelContainer2: {
-    height: (height - 50) / 2,
+    height: (height - 140) / 2,
     justifyContent: 'center',
     alignItems: 'center',
+    // borderWidth: 1,
+    // borderColor: 'blue',
   },
   imageContainer2: {
-    height: (height - 50) / 2,
+    height: (height - 140) / 2,
     width: width,
     paddingTop: 10,
-    paddingBottom: 40,
-    paddingLeft: 10,
-    paddingRight: 10,
+    paddingBottom: 10,
+    // paddingLeft: 10,
+    // paddingRight: 10,
+    // borderWidth: 2,
+    // borderColor: 'red',
   },
   groupButton2: {
     height: 150,
