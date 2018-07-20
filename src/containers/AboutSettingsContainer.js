@@ -24,6 +24,9 @@ class AboutSettingsContainer extends Component {
                     by @tobive{'\n'}
                     MIT License{'\n'}
                     {'\n'}{'\n'}{'\n'}
+                    Icon design by:{'\n'}
+                    www.dribbble.com/sigitpribadi
+                    {'\n'}{'\n'}{'\n'}
                     Background images taken from pixabay.com{'\n'}
                     Credits to:{'\n'} 
                     ranjatm, markusspiske, xusenru
