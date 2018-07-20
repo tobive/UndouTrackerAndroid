@@ -7,6 +7,7 @@ import MainStack from '../stacks/MainStack';
 const addListener = createReduxBoundAddListener('root');
 
 class MainStackContainer extends Component {
+
     render() {
         return (
             <MainStack
